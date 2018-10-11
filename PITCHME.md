@@ -24,12 +24,12 @@ Still possible to use a private fork if desirable
 * Easier to review
 * Easier to see the difference with `git diff`
 * Easier to revert (if required)
-* It is easier to accept one feature without lots of other stuff
+* It is easier to accept one feature without other non relevant changes
 
 ---
 
 ## Guidelines #2
-* When creating a new feature branch, make sure it's created from the latests changes in NeTEx CEN master repository
+* When creating a new feature branch, make sure it's created from the latests changes in the NeTEx CEN master repository
 * Keep the feature branch updated when working on it to detect and handle conflicts at an early stage
 * Clear and descriptive commit messages makes it easier to understand why something was changed
 * Validate all pull requests (already available in the CEN repo)
@@ -86,7 +86,7 @@ git checkout master -b journey_frequency_group_id_constraint_check
 git push --set-upstream origin journey_frequency_group_id_constraint_check
 ```
 This allows other to follow your work.
-If the laptop is run over by a car, the work will not be lost if changes were commited and pushed.
+If the laptop dies, the work will not be lost if changes were commited and pushed.
 
 ---
 
@@ -171,8 +171,6 @@ origin	git@github.com:entur/NeTEx.git (fetch)
 origin	git@github.com:entur/NeTEx.git (push)
 ```
 
-For me, *origin* is the Entur fork. Name remotes after where they are located on github (organization/user..).
-
 ---
 
 ## How to solve merge conflicts
@@ -194,6 +192,7 @@ git push --set-upstream origin journey_frequency_group_id_constraint_check
 git add examples/functions/calendar/NeTEx_Calendar_se_PA1.xml
 git commit -m "Fix NeTEx calendar example so that it validates against schema."
 git push
+# Remember to create PR
 ```
 
 ---
