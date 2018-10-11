@@ -187,6 +187,15 @@ https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-li
 
 ---
 
+## How to rewrite a commit message
+Use:
+```
+git commit --amend
+```
+Default editor will be displayed
+
+---
+
 ### Git commands summed up
 
 ```
@@ -199,6 +208,11 @@ git commit -m "Fix NeTEx calendar example so that it validates against schema."
 git push
 # Remember to create PR
 ```
+
+---
+
+### Accepting pull requests
+https://github.com/entur/NeTEx/tree/remove_readme_txt_file
 
 ---
 
