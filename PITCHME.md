@@ -36,7 +36,7 @@ Still possible to use a private fork if desirable
 
 ---
 
-## Set up private key
+## Set up a private key
 It may not be necesarry but helps a lot when working with git, as you do not have to authenticate for every commit. This guide explains the process for mac/windows/linux:
 
 https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows
@@ -118,6 +118,11 @@ git commit -m "Fix NeTEx calendar example so that it validates against schema."
 ```
 git push
 ```
+
+---
+## A note about commit messages
+They can refer to github issues and pull requests.
+Just just `#` and the number (like `#123`) in the commit message.
 
 ---
 
