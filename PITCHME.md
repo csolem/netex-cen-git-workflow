@@ -144,13 +144,13 @@ git push
 https://github.com/NeTEx-CEN/NeTEx/branches
 * Find your branch
 * Click "New pull request"
-
-See the following guide:
-https://services.github.com/on-demand/github-cli/open-pull-request-github
+Github provides exellent support for comparing changes!
+Pull requests are recommended over plain merging when you need to compare changes, need others to review it, or if you are creating a pull request to a repository you do not have rights to commit to.
 
 ---
 
 ## From the github guide
+https://services.github.com/on-demand/github-cli/open-pull-request-github
 ![workflow](https://services.github.com/on-demand/images/gifs/github-cli/push-and-pull.gif)
 
 ---
@@ -182,7 +182,7 @@ https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-li
 
 ---
 
-### Git commands listed
+### Git commands summed up
 
 ```
 git pull
