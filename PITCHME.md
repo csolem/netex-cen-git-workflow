@@ -21,21 +21,20 @@ Still possible to use a private fork if desirable
 ## Guidelines
 
 * Keep feature branches small and manageable
-  * Easier to review
-  * Easier to see the difference with `git diff`
-  * Easier to revert (if required)
-  * Easier to accept one feature, and not bundled changes
-  *
+* Easier to review
+* Easier to see the difference with `git diff`
+* Easier to revert (if required)
+* It is easier to accept one feature without lots of other stuff
 
 ---
 
 ## Guidelines #2
 * When creating a new feature branch, make sure it's created from the latests changes in NeTEx CEN master repository
-* Keep this branch updated
+* Keep the feature branch updated when working on it to detect and handle conflicts at an early stage
 * Clear and descriptive commit messages makes it easier to understand why something was changed
 * Validate all pull requests (already available in the CEN repo)
 
-----
+---
 
 ## Set up private key
 It may not be necesarry but helps a lot when working with git, as you do not have to authenticate for every commit. This guide explains the process for mac/windows/linux:
@@ -93,7 +92,7 @@ If the laptop is run over by a car, the work will not be lost if changes were co
 ----
 
 ## What remotes do I have?
-Side note: You can see what remotes you have by issuing the command:
+*Side note:* You can see what remotes you have by issuing the command:
 ```
 git remote -vv
 ```
@@ -108,23 +107,42 @@ origin	git@github.com:entur/NeTEx.git (fetch)
 origin	git@github.com:entur/NeTEx.git (push)
 ```
 
-For me, *origin* is the Entur fork. I like to name remotes after where they are located on github.
+For me, *origin* is the Entur fork. Name remotes after where they are located on github.
 
-## Do some changes in the feature branch
+---
 
-* Make sure you do not have uncommited changes before changing anything:
+## Prepare to do some changes
+* First, make sure that you do not have uncommited changes before changing anything:
 ```
 git status
 ```
-Typical output
+* Then make sure your feature branch is up to sync with the master branch
 ```
-On branch journey_frequency_group_id_constraint_check
-nothing to commit, working tree clean
+git fetch
+git merge master
 ```
-* Change files relavant to the feature branch and save
+
+---
+
+## Do some changes in the feature branch
+* Change files relevant to the feature branch
 * To see what changes that have been done, execute `git diff`
 * Àdd the file or files you want to commit:
 ```
 git add examples/functions/calendar/NeTEx_Calendar_se_PA1.xml
 ```
+* Commit with a descriptive message:
+```
+git commit -m "Fix NeTEx calendar example so that it validates."
+```
+* Push the changes remotely
+```
+git push
+```
+
+---
+
+##
+
+
 
