@@ -26,6 +26,10 @@ Still possible to use a private fork if desirable
   * Easier to revert (if required)
   * Easier to accept one feature, and not bundled changes
   *
+
+---
+
+## Guidelines #2
 * When creating a new feature branch, make sure it's created from the latests changes in NeTEx CEN master repository
 * Keep this branch updated
 * Clear and descriptive commit messages makes it easier to understand why something was changed
@@ -54,19 +58,23 @@ https://git-scm.com/downloads
 Clone the repository
 
 ```
-https://github.com/NeTEx-CEN/NeTEx.git
+git clone https://github.com/NeTEx-CEN/NeTEx.git
+```
+```
+cd NeTEx
 ```
 
 ---
 
 ## Checkout a feature branch
 
-Remember: always pull from master before creating a new branch
+Remember: always pull from master before creating a new branch.
+This ensures that changes are made on recent changes, and avoids merging issues later.
 ```
 git pull
 ```
 
-Example creating a branch from the master branch
+Example creating a branch from the master branch. Example branch name: *journey_frequency_group_id_constraint_check*
 ```
 git checkout master -b journey_frequency_group_id_constraint_check
 ```
@@ -78,6 +86,10 @@ git checkout master -b journey_frequency_group_id_constraint_check
 ```
 git push --set-upstream origin journey_frequency_group_id_constraint_check
 ```
+This allows other to follow your work.
+If the laptop is run over by a car, the work will not be lost if changes were commited and pushed.
+
+
 ----
 
 ## What remotes do I have?
@@ -98,4 +110,21 @@ origin	git@github.com:entur/NeTEx.git (push)
 
 For me, *origin* is the Entur fork. I like to name remotes after where they are located on github.
 
-##
+## Do some changes in the feature branch
+
+* Make sure you do not have uncommited changes before changing anything:
+```
+git status
+```
+Typical output
+```
+On branch journey_frequency_group_id_constraint_check
+nothing to commit, working tree clean
+```
+* Change files relavant to the feature branch and save
+* To see what changes that have been done, execute `git diff`
+* Àdd the file or files you want to commit:
+```
+git add examples/functions/calendar/NeTEx_Calendar_se_PA1.xml
+```
+
