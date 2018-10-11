@@ -4,4 +4,6 @@
 
 ---
 
-##
+## Example workflow
+
+![workflow](images/workflow.png)
