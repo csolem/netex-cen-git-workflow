@@ -199,9 +199,10 @@ Default editor will be displayed
 ### Git commands summed up
 
 ```
+git checkout master
 git pull
-git checkout master -b journey_frequency_group_id_constraint_check
-git push --set-upstream origin journey_frequency_group_id_constraint_check
+git checkout -b my_feature_branch
+git push --set-upstream origin my_feature_branch
 # Change example file
 git add examples/functions/calendar/NeTEx_Calendar_se_PA1.xml
 git commit -m "Fix NeTEx calendar example so that it validates against schema."
